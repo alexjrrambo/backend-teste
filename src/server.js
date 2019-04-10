@@ -19,7 +19,7 @@ io.on("connection", socket => {
 //conectando com bd
 mongoose.connect('mongodb+srv://alexjr:leko001993@cluster0-uhi2h.mongodb.net/omnistack?retryWrites=true', { useNewUrlParser: true });
 
-app.use((res, req, next) => {
+app.use((req, res, next) => {
     req.io = io;
 
     return next();
